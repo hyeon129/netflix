@@ -2,7 +2,7 @@
 
 -매일 코딩하기
 
-## 파일작업 후 할일
+## 파일 작업 후 할일
 -git add.
 -git commit - '메세지'
 -git push origin main
