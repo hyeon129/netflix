@@ -5,4 +5,27 @@ body {
     color: #fff;
     font-family: sans-serif;
 }
+.container {
+    width: 100vw; /* viewport width */
+    height: 100vh;/* viewport height */
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    /* 메인축으로의 정렬*/
+    justify-content: center;
+    /* 교차축으로의 정렬 */
+    align-items: center;
+}
+
+img {
+    width: 90px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 60px;
+    text-align: center;
+    line-height: 1.5; /*line height는 행간 1은 =100%라는 뜻 ex. 1.2=120%*/
+    letter-spacing: 0.5px; /*letter spacing은 자간*/
+}   
 
