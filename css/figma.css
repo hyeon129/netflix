@@ -17,15 +17,64 @@ body {
     align-items: center;
 }
 
-img {
+.container img {
     width: 90px;
 }
 
-p {
+.container p {
     font-size: 18px;
     font-weight: 60px;
     text-align: center;
     line-height: 1.5; /*line height는 행간 1은 =100%라는 뜻 ex. 1.2=120%*/
     letter-spacing: 0.5px; /*letter spacing은 자간*/
 }   
+
+.slogan-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan-container img {
+    width: 230px;
+}
+
+.slogan-container p {
+    font-size: 18px;
+    font-weight: 60px;
+    text-align: center;
+    line-height: 1.5; /*line height는 행간 1은 =100%라는 뜻 ex. 1.2=120%*/
+    letter-spacing: 0.5px; /*letter spacing은 자간*/
+}   
+
+.link-container {
+    width: 238px;
+    height: 34px;
+    font-size: 14px;
+    text-align: center;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 10px;
+    gap: 10px;
+    align-items: center;
+    margin-top: 40px;
+}
+.link-container2 {
+    width: 238px;
+    height: 34px;
+    font-size: 14px;
+    padding: 12px 24px;
+    text-align: center;
+    background-color: black;
+    border-color: #fff;
+    border-radius: 10px;
+    gap: 10px;
+    align-items: center;
+    margin-top: 40px;
+}
+
 
