@@ -1,7 +1,7 @@
  body
 {   width: auto;
     height: auto;
-    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 100%);
+    background: black
 }
 .header
 {
@@ -23,7 +23,7 @@
     height: 40px;
 }
  
-.box1
+.all-box
 {
     width: 588px;
     height: 350px;
