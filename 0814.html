@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0814</title>
+    <style>
+        body 
+        { /*
+            background-color: skyblue;
+            color: green;
+            background-image: url('./images/03_2.svg');
+            background-size: 80% auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            */
+        
+           /* background: transparent none repeat left top/auto scroll */
+           /*background: url('./images/03_2.svg') center/80% auto no-repeat fixed;*/
+
+           background: linear-gradient(180deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 16%, rgba(30, 156, 230, 1) 51%, rgba(9, 9, 121, 1) 88%, rgba(2, 0, 36, 1) 100%);
+        }
+        .thumb 
+        {
+            width: 240px;
+            height: 170px;
+            border-radius: 12px 12px 0 0;
+            outline: 2px solid red;
+            overflow: hidden;
+        }
+
+        section
+        {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            border: 1px solid grey;
+            box-sizing: border-box;
+            margin:0 auto;
+            background-image:url('./images/card_thumb_2.jpg');
+            background-size: 80px auto;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        .thumb img 
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .thumb-ir 
+        {
+            width: 240px;
+            height: 170px;
+            border-radius: 12px 12px 0 0;
+            outline: 2px solid red;
+            margin-top: 20px;
+            background-image:url('./images/toons/kosigi-wale.jpg');
+            background-size: 240px auto;
+            background-repeat: no-repeat;
+            background-position: right center; /* 이걸 더 많이씀 (사진을 자유자재로 조절할 수 있어서) */
+        }
+        
+        .blind 
+        {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="thumb">
+        <img src="./images/toons/kosigi-wale.jpg" alt="thumb1">
+    </div>
+
+    <div class="thumb-ir">
+        <span class="blind">illust image</span>
+    </div>
+    <section>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo soluta esse repellendus voluptatem, quam eos aliquid ducimus aut labore molestias, voluptates sint incidunt impedit quod itaque et odio exercitationem inventore.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat provident nobis reiciendis nesciunt vitae itaque unde sit aperiam cumque? Nostrum repudiandae velit ut, molestias quisquam mollitia fugiat repellendus suscipit.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corporis quos ullam et, eligendi enim, exercitationem nesciunt aut doloremque impedit vel ipsum fugit aliquam suscipit neque ducimus deserunt? Corrupti, autem.
+        Recusandae nostrum aliquid a sit, tempore vel maiores fuga soluta, porro corrupti aperiam rerum tempora autem, dicta error deserunt rem sed eius ipsam. Illo in reiciendis placeat aliquam sunt mollitia!
+        Ad laudantium dolores aspernatur rerum reiciendis tempora iure placeat saepe exercitationem esse quia, repellendus dicta, accusantium eum laborum blanditiis eos vel repudiandae hic necessitatibus perferendis quam fuga! Error, inventore quam.
+        Praesentium incidunt adipisci iusto amet fugiat ut tempora rerum consequatur sint natus ipsa quos eligendi voluptas distinctio illum repudiandae labore, necessitatibus alias illo voluptate? Fugiat eveniet tempore recusandae nisi quibusdam?
+        Asperiores, fuga labore atque eaque reiciendis dignissimos magni veniam laborum ullam, perspiciatis sapiente itaque nam est velit deserunt cupiditate rem? Adipisci vero dolores doloribus libero dolor repudiandae at est accusamus.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corporis quos ullam et, eligendi enim, exercitationem nesciunt aut doloremque impedit vel ipsum fugit aliquam suscipit neque ducimus deserunt? Corrupti, autem.
+        Recusandae nostrum aliquid a sit, tempore vel maiores fuga soluta, porro corrupti aperiam rerum tempora autem, dicta error deserunt rem sed eius ipsam. Illo in reiciendis placeat aliquam sunt mollitia!
+        Ad laudantium dolores aspernatur rerum reiciendis tempora iure placeat saepe exercitationem esse quia, repellendus dicta, accusantium eum laborum blanditiis eos vel repudiandae hic necessitatibus perferendis quam fuga! Error, inventore quam.
+        Praesentium incidunt adipisci iusto amet fugiat ut tempora rerum consequatur sint natus ipsa quos eligendi voluptas distinctio illum repudiandae labore, necessitatibus alias illo voluptate? Fugiat eveniet tempore recusandae nisi quibusdam?
+        Asperiores, fuga labore atque eaque reiciendis dignissimos magni veniam laborum ullam, perspiciatis sapiente itaque nam est velit deserunt cupiditate rem? Adipisci vero dolores doloribus libero dolor repudiandae at est accusamus.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae corporis quos ullam et, eligendi enim, exercitationem nesciunt aut doloremque impedit vel ipsum fugit aliquam suscipit neque ducimus deserunt? Corrupti, autem.
+        Recusandae nostrum aliquid a sit, tempore vel maiores fuga soluta, porro corrupti aperiam rerum tempora autem, dicta error deserunt rem sed eius ipsam. Illo in reiciendis placeat aliquam sunt mollitia!
+        Ad laudantium dolores aspernatur rerum reiciendis tempora iure placeat saepe exercitationem esse quia, repellendus dicta, accusantium eum laborum blanditiis eos vel repudiandae hic necessitatibus perferendis quam fuga! Error, inventore quam.
+        Praesentium incidunt adipisci iusto amet fugiat ut tempora rerum consequatur sint natus ipsa quos eligendi voluptas distinctio illum repudiandae labore, necessitatibus alias illo voluptate? Fugiat eveniet tempore recusandae nisi quibusdam?
+        Asperiores, fuga labore atque eaque reiciendis dignissimos magni veniam laborum ullam, perspiciatis sapiente itaque nam est velit deserunt cupiditate rem? Adipisci vero dolores doloribus libero dolor repudiandae at est accusamus.
+    </p>
+    </section>
+</body>
+</html>

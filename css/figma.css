@@ -21,28 +21,7 @@ body {
     width: 90px;
 }
 
-.container p {
-    font-size: 18px;
-    font-weight: 60px;
-    text-align: center;
-    line-height: 1.5; /*line height는 행간 1은 =100%라는 뜻 ex. 1.2=120%*/
-    letter-spacing: 0.5px; /*letter spacing은 자간*/
-}   
-
-.slogan-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    justify-content: center;
-    align-items: center;
-}
-
-.slogan-container img {
-    width: 230px;
-}
-
+.container p,
 .slogan-container p {
     font-size: 18px;
     font-weight: 60px;
@@ -51,30 +30,58 @@ body {
     letter-spacing: 0.5px; /*letter spacing은 자간*/
 }   
 
-.link-container {
-    width: 238px;
-    height: 34px;
-    font-size: 14px;
-    text-align: center;
+
+
+/*figma_login.html*/
+.all-container {
+    outline:1px solid gold;
+    min-width:272px ;
+    width: cal(100% - 100px);
+    max-width: 400px;
+    margin: auto 0; /* 상하 좌우
+    */
+    display: flex;
     flex-direction: column;
-    background-color: black;
-    border-radius: 10px;
-    gap: 10px;
-    align-items: center;
-    margin-top: 40px;
+    justify-content: space-between;
+    padding: 200px 0 70px;
+
+
 }
-.link-container2 {
-    width: 238px;
-    height: 34px;
-    font-size: 14px;
-    padding: 12px 24px;
-    text-align: center;
-    background-color: black;
-    border-color: #fff;
-    border-radius: 10px;
-    gap: 10px;
-    align-items: center;
-    margin-top: 40px;
+
+.slogan-container {
+    display: flex;
+    background-color: gray;
 }
 
 
+.link-container{
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+}
+
+.link-container {
+    width: 272px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    line-height: 1;
+}
+
+.link-container a:first-child{
+    background-color: #1e1e1e;
+}
+
+.link-container a:last-child {
+    border: 2px solid #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
