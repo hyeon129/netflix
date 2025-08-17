@@ -1,0 +1,74 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card-pick2{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+#card-pick2:hover{
+    transform: scale(1.05);
+    
+}
+.card-box{
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    height: 360px;
+    border: none;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.40);
+}
+.card-box img{
+    width: 280px;
+    height: 360px;
+    
+}
+.img-gradient{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+   
+}
+.text-wrap{
+    position: absolute;
+    bottom: 0;
+    padding: 26px;
+    color: white;
+}
+.text-wrap h1{
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.text-wrap p{
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+}
+.play-btn{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    color: white;
+    background: #004fff url(/images/arrow_r.svg) no-repeat center;
+    background-size: 24px;
+    border-radius: 30px;
+}
+.card-box{
+    transition: 0.7s;
+}
+.card-box:hover{
+    transform: scale(0.95);
+    transition: 0.7s;
+}
