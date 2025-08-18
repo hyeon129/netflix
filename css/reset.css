@@ -16,3 +16,24 @@
             margin: -1px;
             overflow: hidden;
         }
+        button {
+            cursor: pointer;
+        }
+        img {
+            max-width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font: inherit;
+            font-weight: inherit;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
