@@ -1,0 +1,58 @@
+ body
+{   width: auto;
+    height: auto;
+    background: black;
+    
+}
+.header
+{
+    display: flex;
+    align-items: center;
+    margin: 16px 120px;
+    gap: 700px;
+
+}
+.header-group
+{
+    display: flex;
+    align-items: center;
+}
+
+.netflix-logo
+{
+    width: 140px;
+    height: 40px;
+}
+ 
+.box1
+{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    gap: 30px;
+}
+h1
+{   
+    font-size: xx-large;
+}
+h2
+{
+    font-size: small;
+    font-weight: 600;
+}
+h3
+{
+    font-size: small;
+    font-weight: 300;  
+}
+.email
+{
+    color: green;
+}
+button
+{
+    width: 70px;
+    height: 32px;
+    background-color: red;
+    border-radius: 6px;
+}

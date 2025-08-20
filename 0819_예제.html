@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0819_예제</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/0819_01.css">
+    <style>
+        body{
+            margin: 50px auto;
+        }
+        h1{
+            font-size: 35px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: -20px;
+            text-transform: uppercase;
+        }
+        .gr{
+            background-color: rgb(209, 209, 209);
+            font-weight: 700;
+        }
+        table{
+            border: 1px solid black;
+            border-top: 3px solid black;
+            margin: 50px auto;
+        }
+        caption{
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        td{
+            border: 1px solid grey;
+        }
+        .seoul{
+            border-right: none;
+        }
+        .seoul + td{
+            border-left: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resume</h1>
+    <table>
+        <caption>기본정보</caption>
+        <colgroup>
+            <col style="width: 120px">
+            <col style="width: 100px">
+            <col>
+            <col style="width: 100px">
+            <col>
+        </colgroup>
+        <tr>
+            <td rowspan="4">사진</td>
+            <td class="gr">이름</td>
+            <td>박도현</td>
+            <td class="gr">생년월일</td>
+            <td>1997.01.29</td>
+        </tr>
+        <tr>
+            <td class="gr">전화</td>
+            <td>010-1234-4568</td>
+            <td class="gr">이메일</td>
+            <td>parkdo@naver.com</td>
+        </tr>
+        <tr>
+            <td class="gr">주소</td>
+            <td class="seoul">Seoul</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="gr">GitHub</td>
+            <td>sdfsdfsdf@sdfdsfd</td>
+            <td class="gr">Portfolio</td>
+            <td>https://fddsfsd.dsd</td>
+        </tr>
+    </table>
+</body>
+</html>

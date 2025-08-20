@@ -32,7 +32,11 @@
             font: inherit;
             font-weight: inherit;
         }
-
+        input,button {
+            border: none;
+            background-color: transparent;
+            color: inherit;
+        }
         ul,
         ol {
             list-style: none;
@@ -43,8 +47,10 @@
         table {
             border-spacing: 0;
             border-collapse: collapse;
+            table-layout: fixed;
+            overflow-wrap: break-word;
         }
-        td {
-            border: 1px solid #ddd;
+        td, th {
              padding: 12px;
         }
+        

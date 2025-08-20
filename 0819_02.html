@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0819_02</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/0819_02.css">
+    <style>
+        .tBox{
+            width: 800px;
+            margin: 50px auto;
+        }
+        .tBox th[scope="row"] {
+            background-color: grey;
+        }
+        .tBox th[scope="col"] {
+            background-color: red;
+            columns: white;
+        }
+        .tBox td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table class="tBox">
+        <caption>성적표</caption>
+        <colgroup>
+            <col style="width: 240px;">
+            <col style="width:calc((100% - 240px) / 3)" span="3">
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <!--머릿글이기 때문에 여기에 td 태그가 있으면 안된다.-->
+        <tr>
+            <th scope="col">이름</th>
+            <th scope="col">국어</th>
+            <th scope="col">영어</th>
+            <th scope="col">수학</th>
+        </tr>
+        </thead>
+                <tfoot>
+            <tr>
+                <th scope="row">Average</th>
+                <td>70</td>
+                <td>80</td>
+                <td>90</td>
+            </tr>
+        </tfoot>
+        <tbody>
+        <tr>
+            <th scope="row">홍길동</th>
+            <td>30</td>
+            <td>20</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th scope="row">손석구</th>
+            <td>80</td>
+            <td>70</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th scope="row">탄지로</th>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
