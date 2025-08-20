@@ -3,25 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIGMA SPLASH</title>
+    <title>Document</title>1280,80
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/figma.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        .box1{
+            max-width: 1290px;
+            width: 100%;
+            height: 83px;
+            border: 1px solid gray;
+            border-radius: 12px;
+            background: linear-gradient(90deg,rgb(143, 6, 177), rgb(79, 1, 99));
+            color: white;
+            margin: 50px auto;
+            padding: 14px 0 0 24px;
+            position: relative;
+            transition: 0.8s;
+        }
+        .box1 h1{
+            font-size: 18px;
+           
+        }
+        .box1 a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: rgb(59, 59, 59);
+            width: 138px;
+            height: 40px;
+            border: 1px solid white;
+            border-radius: 12px;
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            translate: 0 -50%;
+            transition: 0.3s;
+            
+        }
+        .box1:hover{
+                scale: 1.02;
+                transform:translate(0,-1px);
+                background: linear-gradient(90deg, rgb(158, 8, 195), rgb(89, 1, 111));
+            
+        }
+        .box1 a:hover{
+            background-color: rgb(41, 41, 41);
+        }
+    </style>
 </head>
-<img>
-    <!--
-    1. figma에서 필요한 리소스 저장 (로고 svg파일 필요 그 후 이미지
-    폴더 안에 저장해야함)
-    2. 마크업
-    3. css 스타일링
-    -->
-    <div class="container">
-    <img src="./images/피그마 흰색 로고.png" alt="피그마">
-    <p>
-        Mirror prototypes, browse files,<br>
-        and collaborate on the go
-    </p>
-    <a href="./figma_login.html"></a>
-    </div>
-
+<body>
+    <article class="box1">
+        <h1><strong>7,000원</strong>이면 만날 수 있는 넷플릭스.</h1>
+        <p>
+            가장 경제적인 광고형 멤버십을 이용해보세요.
+        </p>        
+        <a href="#">자세히 알아보기</a>
+    </article>
 </body>
 </html>
