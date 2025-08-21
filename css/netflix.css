@@ -1,58 +1,191 @@
- body
-{   width: auto;
-    height: auto;
-    background: black;
-    
+body{
+    background-color: black;
 }
-.header
-{
+.header-container{
+    max-width: 1240px;
+    width: 100%;
+    max-height: 88px;
+    height: 100%;
     display: flex;
-    align-items: center;
-    margin: 16px 120px;
-    gap: 700px;
-
+    justify-self: center;
+    justify-content: space-between;
+    margin: 24px 0;
 }
-.header-group
-{
-    display: flex;
-    align-items: center;
-}
-
-.netflix-logo
-{
-    width: 140px;
+.netflix-logo{
+    width: 148px;
     height: 40px;
 }
- 
-.box1
-{
+.header-group{
     color: white;
-    margin: 0 auto;
+    padding: 0 6px; /*여기에 컬러와 폰트 웨이트 안먹히는 이유*/ 
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 12px;
+}
+.header-group select{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
     text-align: center;
-    gap: 30px;
+    background: rgba(22, 22, 22, 0.7) url("../images/icons/cafe.svg") no-repeat; /*크기바꾸는법과 색 변경 방법*/
+    width: 124px;
+    height: 32px;
+    border-radius: 4px;
+    /*gap과 패딩 입히는 방법*/
 }
-h1
-{   
-    font-size: xx-large;
-}
-h2
-{
-    font-size: small;
-    font-weight: 600;
-}
-h3
-{
-    font-size: small;
-    font-weight: 300;  
-}
-.email
-{
-    color: green;
-}
-button
-{
+.header-group button{
+    background-color: red;
+    font-size: 0.9rem;
+    font-weight: 400;
     width: 70px;
     height: 32px;
-    background-color: red;
-    border-radius: 6px;
+    border-radius: 4px;
 }
+
+
+.main-container{ /*세로로 가운데 정렬이 안됨*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box1 h1{
+    color: white;
+    text-align: center;
+    max-width: 1520px;
+    width: 100%;
+    height: 562px;
+    border: 1px solid red;
+}
+h1{
+    font-size: 56px;    
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 32px;
+}
+h3{
+    font-size: 16px;
+}
+form{ 
+    /* 버튼들 가운데 정렬방법 */
+    margin:16px;
+}
+form input{
+    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    width: 407px;
+    height: 56px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 550;
+    padding: 0 16px;
+    position: relative;
+    margin: 0 8px 0 0;
+}
+form button{
+    width: 172px;
+    height: 56px;
+    background-color: red;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: absolute;
+    
+}
+button img{ /*화살표 정렬 여쭤보기*/
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+
+.speci-box{
+            max-width: 1290px;
+            width: 100%;
+            height: 83px;
+            border: 1px solid gray;
+            border-radius: 12px;
+            background: linear-gradient(90deg,rgb(143, 6, 177), rgb(79, 1, 99));
+            color: white;
+            margin: 50px auto;
+            padding: 14px 24px;
+            position: relative;
+            transition: 0.8s;
+        }
+        .speci-box h1{
+            font-size: 18px;
+        }
+        .speci-box a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: rgb(59, 59, 59);
+            width: 138px;
+            height: 40px;
+            border: 1px solid white;
+            border-radius: 12px;
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            translate: 0 -50%;
+            transition: 0.3s;
+            
+        }
+        .speci-box:hover{
+                scale: 1.02;
+                transform:translate(0,-1px);
+                background: linear-gradient(90deg, rgb(158, 8, 195), rgb(89, 1, 111));
+        }
+        .speci-box a:hover{
+            background-color: rgb(41, 41, 41);
+        }
+
+
+    .now-container{ /*얘네를 1224부터 시작하게 하는 방법*/
+            width: 1224px;
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 64px;
+            border: 1px solid red;
+        }
+        h4,h5{
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .now-contents{
+            width: 182px;
+            height: 252px;
+            background-color: navy;
+            border: 1px solid red;
+            border-radius: 0.7rem;
+            
+        }
+    .reason-container{
+         width: 1224px;
+         height: auto;
+         margin: 0 auto;
+         margin-bottom: 64px;
+         border: 1px solid red;
+         margin-bottom: 64px;
+    }
+        .reason-contents{
+            width: 294px;
+            height: 312px;
+            height: 348px;
+            border: 1px solid red;
+            border-radius:0.7rem ;
+        }
+        .reason-contents h1, p{
+            color: white;
+        }

@@ -6,36 +6,72 @@
     <title>neflix</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/netflix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
-    <header class="header">
+<div class="main-page">
+    <header class="header-container">
        <img class="netflix-logo" src="./images/Netflix_2015_logo.svg" alt="넷플릭스">
     <div class="header-group">
+        <!-- <img src="./images/icons/cafe.svg" class="select-img"> -->
         <select>
             <option value="ko">한국어</option>
             <option value="en">English</option>
         </select>
-
         <button type="button">로그인</button>
     </div>
     </header>
-
+    <div class="main-container">
         <article class="box1">
             <h1>영화, 시리즈 등을<br>
                 무제한으로
             </h1>
             <h2>
-            7,000원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다.
+           <strong>7,000</strong>원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다. <!--em이 기울어진 폰트로 나옴-->
             </h2>
             <h3>
                 시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.
             </h3>
-            <form>
+   <form>
        <input type="email" placeholder="이메일주소" required>
-       <button type="submit">시작하기</button>
+       <button type="submit">시작하기
+       <img src="./images/arrow_r.svg" alt="화살표">
+       </button> <!--버튼과 인풋 클래스명 어떤게 좋을지 여쭤보기-->
    </form>
     </article>
-    
+</div>
+    <article class="speci-box">
+        <h1><strong>7,000원</strong>이면 만날 수 있는 넷플릭스.</h1>
+        <p>
+            가장 경제적인 광고형 멤버십을 이용해보세요.
+        </p>        
+        <a href="#">자세히 알아보기</a>
+    </article>
+
+    <div class="now-container">
+        <h4>지금 뜨는 콘텐츠</h4>
+        <ul class="now-contents">
+            <li>
+                <img src="./images/irangi_0.png" alt="">
+            </li>
+        </ul>
+    </div>
+
+        <ul class="reason-container">
+            <h5>가입해야 하는 또 다른 이유</h5>
+        <ul class="reason-contents"></ul>
+            <li>
+                <h1>TV로 즐기세요</h1>
+                <p>
+                    스마트 TV, PlayStation, Xbox,<br> 
+                    Chromecast, Apple TV, 블루레이<br> 
+                    플레이어 등 다양한 디바이스에서<br>
+                    시청하세요.
+                </p>
+            </li>
+        </ul>        
+    </div>
 </body>
 </html>

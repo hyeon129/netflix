@@ -12,7 +12,6 @@ body {
     border: 2px solid black;
     border-radius: 12px;
     overflow: hidden;
-    z-index: 103;
 }
 .btn{
     background-color: red;
