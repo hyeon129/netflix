@@ -43,21 +43,17 @@ body{
     height: 32px;
     border-radius: 4px;
 }
-
-
-.main-container{ /*세로로 가운데 정렬이 안됨*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.box1 h1{
+.main-container{
     color: white;
     text-align: center;
     max-width: 1520px;
     width: 100%;
     height: 562px;
     border: 1px solid red;
+    padding: 50px;
+}
+.box1{
+    width: 100%;
 }
 h1{
     font-size: 56px;    
@@ -75,7 +71,7 @@ h3{
 }
 form{ 
     /* 버튼들 가운데 정렬방법 */
-    margin:16px;
+    padding:16px;
 }
 form input{
     background-color: rgba(255, 255, 255, 0.1);
@@ -120,8 +116,9 @@ button img{ /*화살표 정렬 여쭤보기*/
             position: relative;
             transition: 0.8s;
         }
-        .speci-box h1{
+        .speci-box > h1{
             font-size: 18px;
+         
         }
         .speci-box a{
             display: flex;

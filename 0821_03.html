@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[name=subject]{
+        }
+    </style>
+</head>
+<body>
+    <p>아래에서 좋아하는 과목을 모두 선택하세요.</p>
+
+    <!-- 명시적인 레이블이고 웹 접근성이 제일 좋다 -->
+    <input type="checkbox" id="subject-1" name="subject">
+    <label for="subject-1">HTML</label><br> 
+
+    <input type="checkbox" id="subject-2" name="subject">
+    <label for="subject-2">css</label><br>
+
+    <input type="checkbox" id="subject-3" name="subject">
+    <label for="subject-3">JavaScript</label>
+
+    <p>자동로그인 설정하기</p>
+    <!-- 암묵적인 레이블 -->
+     <!-- 버튼과 글씨의 간격을 조절하고 싶을때 많이 쓰이고 가장 정석적인 암묵적인 레이블 방법 -->
+     <!-- <label>  
+        <input type="radio" name="gender">
+        <span>남자</span>
+     </label> <-->
+    <label><input type="checkbox"> 자동로그인</label>
+
+    <p>평가를 해주세요.</p>
+    <label><input type="radio" name="judg"> 좋아요</label>
+    <label><input type="radio" name="judg"> 싫어요</label>
+
+    <p>성별을 선택해주세요.</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">남</label>
+
+    <input type="radio" id="female" name="gender" checked value="women">
+    <label for="female">여</label>
+
+    <input type="radio" id="except" name="gender" value="except">
+    <label for="except">기타</label>
+
+    <p>메모를 남겨주세요.</p>
+    <input type="text" name="memo" placeholder="메모를 입력하세요">
+
+
+    <!-- 빈요소 : input, link, br, img -->
+</body>
+</html>
