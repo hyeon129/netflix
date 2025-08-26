@@ -34,7 +34,12 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
-    gap: 50px;
+}
+.main-container li{
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    background-color: white;
 }
 .main-container h1{
     max-width: 272px;
@@ -42,7 +47,7 @@ body {
     height: 92px;
     font-size: 90px;
     font-weight: 600;
-    margin: 300 auto;
+    margin-bottom: 70px;
 }
 .search-container{
     max-width: 746px;
@@ -52,7 +57,7 @@ body {
     border-radius: 40px;
     background: url("../images/icons/search_gr.svg") white no-repeat;
     display: flex;
-    margin: 0 auto;
+    margin-bottom: 50px;
     padding-left: 48px;
 }
 input::placeholder{
