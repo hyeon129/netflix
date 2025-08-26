@@ -29,9 +29,10 @@ body {
     gap: 20px;
 }
 .main-container{
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    flex-direction: column;
 }
 .main-container h1{
     max-width: 272px;
