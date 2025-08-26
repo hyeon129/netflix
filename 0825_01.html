@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0825_01</title>
+    <style>
+        .terms-container{
+            height: 150px;
+            border: 1px solid silver;
+            width: 100%;
+            max-width: 250px;
+            padding: 10px;
+            border-radius: 12px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .terms-container p{
+            line-height: 1;
+            font-size: 12px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <select>
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+        <option value="jp">일본어</option>
+    </select>
+    <select>
+        <option>1920</option>
+        <option>1925</option>
+        <option>1945</option>
+        <option selected value="1955">1955</option>
+        <option>1965</option>
+        <option>1976</option>
+        <option>1985</option>
+        <option>1995</option>
+    </select>
+</div>
+<div>
+    <select name="">
+        <optgroup label="서울시">
+            <option>구로구</option>
+            <option>강서구</option>
+        </optgroup>
+            <optgroup label="부산시">
+            <option>사하구</option>
+        </optgroup>
+        <optgroup label="제주시">
+            <option>제주시</option>
+            <option>서귀포시</option>
+        </optgroup>
+    </select>
+</div>
+    <hr>
+<div>
+    <textarea readonly disabled>
+        다양한 네이버 서비스를 즐겨보세요.
+        네이버는 <a href="https://www.naver.com"
+        target="_blank">
+        www.naver.com
+        </a>
+    </textarea>
+</div>
+<div class="terms-container">
+        <h3>다양한 네이버 서비스를 즐겨보세요.다양한 네이버 서비스를 즐겨보세요.
+        <p>네이버는 <a href="https://www.naver.com"
+        target="_blank">
+        www.naver.com
+        </a>
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, architecto perspiciatis magnam adipisci ducimus pariatur repudiandae dolor quia ex corrupti. Deleniti eius in odio modi quisquam porro omnis facilis ex?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, architecto perspiciatis magnam adipisci ducimus pariatur repudiandae dolor quia ex corrupti. Deleniti eius in odio modi quisquam porro omnis facilis ex?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, architecto perspiciatis magnam adipisci ducimus pariatur repudiandae dolor quia ex corrupti. Deleniti eius in odio modi quisquam porro omnis facilis ex?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, architecto perspiciatis magnam adipisci ducimus pariatur repudiandae dolor quia ex corrupti. Deleniti eius in odio modi quisquam porro omnis facilis ex?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, architecto perspiciatis magnam adipisci ducimus pariatur repudiandae dolor quia ex corrupti. Deleniti eius in odio modi quisquam porro omnis facilis ex?
+        </p>
+</div>
+    <div>
+    <input type="tell" required placeholder="'-'없이 인증번호만 입력해주세요'">
+    <button type="button" disabled>인증요청</button>
+    <hr>
+    <input type="text" disabled placeholder="인증번호 6자리">
+</div>
+    <label for="disk_c">Disk usage C:</label>
+<meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+
+<label for="disk_d">Disk usage D:</label>
+<meter id="disk_d" value="0.6">60%</meter>
+</body>
+</html>

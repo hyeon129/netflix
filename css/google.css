@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  /* background-image: url("../images/full_bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */
+  /* 축약형 */
+  background: url("../images/dark_city.jpg") no-repeat fixed center center/cover;
+  color: white;
+}
+.nav-container{
+    width: 100%;
+    max-width: 1536px;
+    color: white;
+    border: 1px solid red;
+}
+.nav-container ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.main-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.main-container h1{
+    max-width: 272px;
+    width: 100%;
+    height: 92px;
+    font-size: 90px;
+    font-weight: 600;
+    margin: 300 auto;
+}
+.search-container{
+    max-width: 746px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid red;
+    border-radius: 40px;
+    background: url("../images/icons/search_gr.svg") white no-repeat;
+    display: flex;
+    margin: 0 auto;
+    padding-left: 48px;
+}
+input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+}

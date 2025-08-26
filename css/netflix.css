@@ -4,12 +4,12 @@ body{
 .header-container{
     max-width: 1240px;
     width: 100%;
-    max-height: 88px;
-    height: 100%;
+    height: 88px; /* ← 확실한 높이 지정 */
     display: flex;
-    justify-self: center;
     justify-content: space-between;
-    margin: 24px 0;
+    align-items: center; /* 세로 가운데 정렬 */
+    margin: 0 auto;
+    padding: 0 7px;
 }
 .netflix-logo{
     width: 148px;
@@ -45,37 +45,46 @@ body{
 }
 .main-container{
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     max-width: 1520px;
     width: 100%;
     height: 562px;
     border: 1px solid red;
-    padding: 50px;
+    padding: 68px 0 0 0;
+    margin-bottom: 130px;
 }
 .box1{
     width: 100%;
+    color: white;
 }
-h1{
+.box1 h1{
     font-size: 56px;    
     font-weight: 900;
     line-height: 1.2;
     margin: 0 0 16px;
 }
-h2{
+.box1 h2{
     font-size: 20px;
     font-weight: 500;
     margin: 0 0 32px;
 }
-h3{
+.box1 h3{
     font-size: 16px;
 }
 form{ 
     /* 버튼들 가운데 정렬방법 */
-    padding:16px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center;     /* 세로 가운데 정렬 (높이 필요) */
+    /* position: relative; */
+    
 }
 form input{
-    background-color: rgba(255, 255, 255, 0.1);
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
     width: 407px;
     height: 56px;
     border: 1px solid grey;
@@ -83,7 +92,6 @@ form input{
     font-size: 1rem;
     font-weight: 550;
     padding: 0 16px;
-    position: relative;
     margin: 0 8px 0 0;
 }
 form button{
@@ -93,26 +101,28 @@ form button{
     border-radius: 4px;
     font-size: 1.5rem;
     font-weight: 600;
-    position: absolute;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
 button img{ /*화살표 정렬 여쭤보기*/
     width: 24px;
     height: 24px;
-    vertical-align: middle;
+    
+    /* translate: 0 -50%; */
 }
 
 
 .speci-box{
-            max-width: 1290px;
+            max-width: 1140px;
             width: 100%;
             height: 83px;
-            border: 1px solid gray;
-            border-radius: 12px;
-            background: linear-gradient(90deg,rgb(143, 6, 177), rgb(79, 1, 99));
+            border-radius: 16px;
+            background: linear-gradient(90deg,rgb(38, 23, 51), rgb(21, 26, 63));
             color: white;
             margin: 50px auto;
-            padding: 14px 24px;
+            padding: 16px 32px;
             position: relative;
             transition: 0.8s;
         }
@@ -125,11 +135,10 @@ button img{ /*화살표 정렬 여쭤보기*/
             align-items: center;
             justify-content: center;
             color: white;
-            background-color: rgb(59, 59, 59);
+            background-color: rgb(65, 67, 68);
             width: 138px;
             height: 40px;
-            border: 1px solid white;
-            border-radius: 12px;
+            border-radius: 4px;
             position: absolute;
             right: 40px;
             top: 50%;
@@ -138,12 +147,12 @@ button img{ /*화살표 정렬 여쭤보기*/
             
         }
         .speci-box:hover{
-                scale: 1.02;
-                transform:translate(0,-1px);
-                background: linear-gradient(90deg, rgb(158, 8, 195), rgb(89, 1, 111));
+            scale: 1.02;
+            transform:translate(0,-1px);
+            background: linear-gradient(90deg, rgb(71, 37, 102), rgb(22, 29, 82));
         }
         .speci-box a:hover{
-            background-color: rgb(41, 41, 41);
+            background-color: rgb(59, 60, 98);
         }
 
 
@@ -154,29 +163,29 @@ button img{ /*화살표 정렬 여쭤보기*/
             margin-bottom: 64px;
             border: 1px solid red;
         }
-        h4,h5{
+        h4,h5,h6{
             color: white;
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 24px;
         }
-        .now-contents{
+        .now-content1{
             width: 182px;
             height: 252px;
             background-color: navy;
             border: 1px solid red;
             border-radius: 0.7rem;
-            
         }
+
+
     .reason-container{
          width: 1224px;
          height: auto;
          margin: 0 auto;
          margin-bottom: 64px;
          border: 1px solid red;
-         margin-bottom: 64px;
     }
-        .reason-contents{
+        .reason-content1{
             width: 294px;
             height: 312px;
             height: 348px;
@@ -186,3 +195,47 @@ button img{ /*화살표 정렬 여쭤보기*/
         .reason-contents h1, p{
             color: white;
         }
+
+
+    .faq-container{
+        position: relative;
+        border: 1px solid red;
+        max-width: 1224px;
+        width: 100%;
+        height: auto;
+        color: white;
+        margin: 20px auto;
+    }
+        .detail{
+            width: 100%;
+            border: 1px solid red;
+            background-color: rgb(68, 68, 68);
+            font-size: 24px;
+            max-width: 1224px;
+            height: auto;
+            padding: 24px;
+            margin-bottom: 10px;
+    }
+        .faq-container p a{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: auto;
+            border-top: 1px solid black;
+            background-color: rgb(68, 68, 68);
+            font-size: 24px;
+            padding: 24px;
+    }   
+        .detail summary::after{
+            content: "";
+            position: absolute;
+            right: 20px;
+            background: url('../images/icons/plus-solid-full-wt.svg') no-repeat center center/contain;
+            top: 50%; 
+            translate: 0 -50%;
+            width: 24px;
+            height: auto;
+    }
+
+
+  

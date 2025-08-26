@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position:static, 기본값
+
+        offset속성 : left top right bottm
+        position:relative,
+
+        position:relative, 무조건 나를 기준으로함. 자리를 지킴
+
+        position:absolute,
+        floating button : z 축으로 떠있는 요소
+        부모나, 조상중에 position이 static이 아닌 가장 가까운 요소를 기준으로함.
+
+        position:fixed,
+        floating butto: z축으로 떠있는 요소
+        무조건 body를 기준으로 하고 스크롤이 되지않음. */
+        .container {
+            background-color: gold;
+            position: relative;
+            margin: 0 auto;
+            max-width: 300px;
+            width: 100%;
+            height: 300px;
+        }
+        .child-container{
+            width: 200px;
+            height: 200px;
+            background-color: olive;
+            background: url(./images/card_thumb_0.jpg) no-repeat center center/cover;
+            position: relative;
+        }
+        .ghost1{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .ghost2{
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+        }
+        .container button{
+            width: 50px;
+            height: 50px;
+            background-color: tomato;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: #fff;
+            position: absolute;
+            /* top:cal(50%-25px) */
+            top:50%;
+        }
+        
+        .container .prev{
+            left: 0;
+             translate: -50% -50%;
+        }
+        .container .next{
+            right: 0;
+            translate: 50% -50%;
+        }
+
+        .full{
+            background-color: rgba(54, 148, 241, 0);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transition: 0.4s;
+        }
+        .child-container:hover .full {
+            background-color: rgba(54, 148, 241, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./images//ghost_n1.png" alt="" class="ghost1">
+        <div class="child-container">
+            <img src="./images//ghost_n1.png" alt="" class="ghost2">
+
+            <div class="full"></div>
+        </div>
+        <button type="button" class="prev">이전</button>
+        <button type="button" class="next">다음</button>
+    </div>
+
+</body>
+</html>
