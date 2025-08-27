@@ -1,0 +1,68 @@
+        @media all and (max-width:1200px) {
+
+            /* 1200px 이하에서는 ~게 하겠다 라는 뜻 */
+            body {
+                background-color: tomato;
+            }
+        }
+
+        @media all and (max-width:1024px) {
+
+            /* 1200px 이하에서는 ~게 하겠다 라는 뜻 */
+            /* 태블릿 아니면 작은 노트북 */
+            body {
+                background-color: olive;
+            }
+            .container li{
+                width: calc((100% - 20px) / 3);
+        }
+            .container li:last-child{
+                width: 100%;
+        }
+        }
+
+        @media all and (max-width: 764px){
+            body {
+                background-color: blue;
+            }
+            .btn_ham{
+            display: flex;
+        }
+            .btn_close {
+                display: inline-block;
+            }
+            .gnb-container{
+                position: fixed;
+                right: -310px;
+                top: 0;
+                height: 100vh;
+                width: 300px;
+            }
+            .gnb-container ul {
+                display: block;
+                height: auto;
+                padding-top: 100px;
+            }
+        }
+
+        @media all and (max-width: 480px){
+            body {
+                background-color: rgb(86, 246, 126);
+            }
+
+            .container ul{
+                flex-direction: column;
+            }
+            .container li{
+                width: 100%;
+            }
+            .container:last-child li{
+                width: 100%;
+            }
+        }
+
+         @media all and (max-width: 376px){
+            body {
+                background-color: rgb(214, 237, 13);
+            }
+        }
