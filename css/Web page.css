@@ -1,0 +1,91 @@
+    .video-container{
+        background: url("../images/bg_hogwarts.jpg") no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .video-container{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .page-header {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .page-header .inner{
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 40px;
+    }
+    .svg-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .svg-icon .moon {
+        fill: #fff;
+        transition: 0.5s;
+    }
+    body{
+        color: white;
+    }
+    h1{
+        font-size: 36px;
+        font-weight: 500;
+        font-family: sans-serif; 
+    }
+    .nav{
+        max-width: 120px;
+        width: 100%;
+        margin: -50px auto;
+    }
+    .nav-center{
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .slogan-container{
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 1px solid red;
+        translate: -50% -50%;
+    }
+    .slogan-container h2{
+        position: relative;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 0.9em;
+        margin-bottom: 4rem;
+    }
+    .slogan-container h2::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        width: 30px;
+        height: 1px;
+        background-color: #fff;
+        bottom: -2rem;
+    }
+
+    .ico-scroll {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 1px solid red;
+        translate: -50% 0%;
+        width: 40px;
+        opacity: 0.5;
+    }
+
+    :root{
+        --light-cover:rgba();
+        --light-text:#fff;
+        --hover:gold;
+    }

@@ -1,0 +1,204 @@
+:root{
+    --bg:#d9e0e6;
+    --card:#d3dbe4;
+    --card-deep:#c2cbd6;
+    --ink:#1e1e1e;
+    --muted:#6f8faa;
+    --white:#ffffff;
+    --shadow: 0 10px 20px rgba(17,24,39,.08), 0 3px 6px rgba(17,24,39,.08);
+    --radius-xl:28px;
+    --radius-lg:22px;
+    --radius-md:16px;
+}
+*{
+    box-sizing:border-box
+}
+html,body{height:100%}
+body{
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,AppleGothic,Malgun Gothic,Pretendard,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+}
+
+/* ============ Header ============ */
+.header{
+    max-width:1920px;
+    padding:24px 160px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:28px;
+}
+.main-nav a{
+    color:#0b0b0b;
+    font-size: 24px;
+    font-weight:700 !important;
+    margin-left:28px;
+}
+
+/* ============ Layout (no grid) ============ */
+.wrap{
+    max-width:1200px;
+    margin:0 auto;
+    padding:18px 20px 80px;
+    display:flex;                 /* 좌우 2단 */
+    gap:28px;
+}
+
+/* ------- left tiles (flex-wrap 2열) ------- */
+.left-panel{ width:440px; flex:0 0 440px; }
+.tiles{
+    width:440px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+/* 한 칸 210, 갭 18 → 210*2+18=438(컨테이너 440 맞춤) */
+.tile{
+    border-radius:var(--radius-xl);
+    box-shadow:var(--shadow);
+    background:var(--card);
+    overflow:hidden;
+}
+.profile{
+    width:210px;
+    height:438px;                 /* 두 칸 + gap */
+    background:linear-gradient(180deg,#bac8da, #93a8c2);
+    /* background-image:url(../img/profile.png); background-size:cover; background-position:center; */
+}
+.artwork{
+    width:210px;height:210px;
+    background:#98b4cf;
+    position:relative;
+}
+.white-sq{ width:210px;height:210px; background:var(--white); }
+
+.white-rect{ width:210px;height:210px; background:var(--white); }
+.dark-sq{   width:210px;height:210px; background:#262a2c; }
+
+.pattern{
+    width:210px;height:140px;
+    border-radius:22px;
+    background:#94aac5;
+  /* background-image:url(../img/pattern.jpg); background-size:cover; background-position:center; */
+}
+
+/* ------- right panel ------- */
+.right-panel{
+    flex:1 1 auto;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+}
+
+/* About banner (큰 말풍선 박스 느낌) */
+.about-banner{
+    height:150px;
+    border-radius:28px;
+    background:var(--card);
+    box-shadow:var(--shadow);
+    position:relative;
+    padding:28px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+.about-banner h2{
+    margin:0;
+    font-size:28px;
+    color:#6e92b0;
+    font-weight:800;
+    }
+
+/* Preview card */
+.preview-card{
+    border-radius:28px;
+    background:var(--card);
+    box-shadow:var(--shadow);
+    padding:24px;
+}
+.card-inner{
+    height:340px;
+    border-radius:22px;
+    background:rgba(255,255,255,0.15);
+    display:flex;                 /* 텍스트/폰 나란히 */
+    align-items:center;
+    justify-content:space-between;
+    padding:34px 34px 34px 34px;
+}
+.preview-copy{ max-width:420px; }
+.preview-copy h3{
+    font-size:28px;margin:0 0 26px;color:#6e92b0;font-weight:800;
+}
+
+/* Learn more 버튼 */
+.btn{
+    appearance:none;border:0;cursor:pointer;
+    padding:14px 26px;border-radius:999px;font-weight:700;
+}
+.learn-btn{
+    background:#242424;color:#fff; box-shadow:var(--shadow);
+}
+.learn-btn:active{ transform:translateY(1px); }
+
+/* 툴 아이콘 (작은 정사각형 버튼 느낌) */
+.tool-icons{ list-style:none;padding:0;margin:22px 0 0; display:flex; gap:10px; }
+.ic{ width:28px;height:28px;border-radius:6px; box-shadow:var(--shadow); background:#213; }
+.ic-ps{ background:#1f6bce; }
+.ic-ai{ background:#ff8a00; }
+.ic-figma{ background:#19a974; }
+.ic-html{ background:#e5532d; }
+.ic-css{ background:#2a64f5; }
+
+/* 폰 스크린 프리뷰 */
+.phone-shot{
+    width:260px;height:220px;border-radius:22px;
+    background:var(--card-deep);
+    box-shadow:var(--shadow);
+  /* background-image:url(../img/phone.png); background-size:contain; background-repeat:no-repeat; background-position:center; */
+}
+
+/* 하단 점 + 텍스트 */
+.footer-dot-row{
+    display:flex; align-items:center; gap:12px; padding-left:6px;
+}
+.footer-dot-row .dot{
+    width:28px;height:28px;border-radius:50%;
+    background:#222; box-shadow:var(--shadow);
+}
+.footer-dot-row .caption{ color:#444; }
+
+/* ============ Blobs (decor circles) ============ */
+.blob{
+    position:fixed;
+    border-radius:999px;
+    background:#1f1f1f;
+    opacity:.95;
+    z-index:0;
+    pointer-events:none;
+}
+.blob-left{
+    width:64px;height:64px; left:-18px; top:300px;
+}
+.blob-right{
+    width:220px;height:220px; right:-80px; top:210px;
+    background:#5382a7;
+}
+
+/* ============ Responsive (간단) ============ */
+@media (max-width: 1024px){
+  .wrap{ flex-direction:column; }
+  .left-panel{ width:100%; flex:0 0 auto; }
+  .tiles{ width:100%; justify-content:center; }
+  .right-panel{ width:100%; }
+  .card-inner{ height:auto; flex-direction:column; gap:20px; }
+  .phone-shot{ width:70%; max-width:320px; }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ken Portfolio</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/tlfgja.css" />
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="brand">
+      <span>Ken</span>
+    </div>
+    <nav class="main-nav">
+      <a href="#about">About me</a>
+      <a href="#product">Product</a>
+    </nav>
+  </header>
+
+  <!-- 배경 장식(원형) -->
+  <div class="blob blob-left"></div>
+  <div class="blob blob-right"></div>
+
+  <main class="wrap">
+    <!-- 좌측 타일 -->
+    <aside class="left-panel">
+      <div class="tiles">
+        <div class="tile profile" aria-label="profile image"></div>
+        <div class="tile artwork" aria-label="artwork image"></div>
+        <div class="tile white-sq" aria-hidden="true"></div>
+
+        <div class="tile white-rect" aria-hidden="true"></div>
+        <div class="tile dark-sq" aria-hidden="true"></div>
+
+        <div class="tile pattern" aria-label="pattern image"></div>
+      </div>
+    </aside>
+
+    <!-- 우측 컨텐츠 -->
+    <section class="right-panel">
+      <!-- About 배너 -->
+      <section id="about" class="about-banner">
+        <h2>About me</h2>
+      </section>
+
+      <!-- Preview 카드 -->
+      <section class="preview-card">
+        <div class="card-inner">
+          <div class="preview-copy">
+            <h3>Preview</h3>
+
+            <button class="btn learn-btn" type="button">Learn more</button>
+
+            <ul class="tool-icons">
+              <li class="ic ic-ps" aria-label="Photoshop"></li>
+              <li class="ic ic-ai" aria-label="Illustrator"></li>
+              <li class="ic ic-figma" aria-label="Figma"></li>
+              <li class="ic ic-html" aria-label="HTML5"></li>
+              <li class="ic ic-css" aria-label="CSS3"></li>
+            </ul>
+          </div>
+
+          <div class="phone-shot" role="img" aria-label="app preview"></div>
+        </div>
+      </section>
+
+      <div class="footer-dot-row">
+        <span class="dot"></span>
+        <span class="caption">lorem</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
