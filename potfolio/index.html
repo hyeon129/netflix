@@ -6,21 +6,23 @@
   <title>내 홈페이지</title>
   <style>
     @font-face {
-  font-family: 'HarryPotter';
-  src: url('./fonts/-na_lover-webfont.woff') format('woff2'),
-       url('./fonts/-na_lover-webfont.woff2') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+      font-family: 'HarryPotter';
+      src: url('./fonts/-na_lover-webfont.woff') format('woff2'),
+           url('./fonts/-na_lover-webfont.woff2') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     *,
     *::before,
     *::after {
-        box-sizing: border-box;
-}
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'HarryPotter', serif;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-      url(./images/web_pofol_BG2.jpg) no-repeat center center/cover;
+                  url(./images/BG/bg_hogwarts.jpg) no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -32,8 +34,7 @@
     nav {
       max-width: 1290px;
       width: 100%;
-      /* background: linear-gradient(180deg,rgba(62, 62, 112, 0.9), rgba(55, 55, 90, 0.7)); */
-      background: #0B0C10;
+      background: rgba(15, 15, 20, 0.95);
       border-radius: 30px;
       padding: 0 50px;
       padding-top: 20px;
@@ -44,18 +45,27 @@
       margin-bottom: 100px;
       box-shadow: 0 4px 12px rgba(74, 74, 74, 0.15);
     }
-
+    nav:hover {
+    background: rgba(218,165,32,0.15);
+    transition: 0.4s;
+    }
     nav a {
       text-decoration: none;
       color: silver;
       font-weight: 600;
       margin: 0 10px;
+      transition: 0.4ss;
     }
-    .carousel-wrapper{
-        position: relative;   /* 화살표 기준점 */
-        width: 900px;
-        height: 400px;
+    nav a:hover {
+    color: gold;
     }
+
+    .carousel-wrapper {
+      position: relative;
+      width: 900px;
+      height: 400px;
+    }
+
     .carousel {
       position: relative;
       width: 900px;
@@ -63,55 +73,76 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* overflow: hidden; */
     }
 
+    /* 카드 기본 상태 (숨김) */
     .card {
+      display: none;
       position: absolute;
       width: 600px;
       height: 350px;
-      background: #d3dbe4;
       border-radius: 5px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      display: flex;
       justify-content: center;
       align-items: center;
       font-size: 22px;
       font-weight: bold;
-      color: #1e1e1e;
-      transition: all 0.6s ease;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+        opacity: 0;
+      transition: transform 0.9s ease, opacity 0.9s ease;
+    }
+
+    /* 보이는 카드만 표시 */
+    .card.left,
+    .card.center,
+    .card.right {
+      display: flex;
+      opacity: 1;
     }
 
     .card.left {
-      transform: translateX(-220px) scale(0.75);
+      transform: translateX(-280px) scale(0.75);
       z-index: 1;
     }
 
     .card.center {
       transform: translateX(0) scale(1);
       z-index: 2;
-      
+      box-shadow: 0 8px 16px rgba(0,0,0,1);
     }
 
     .card.right {
-      transform: translateX(220px) scale(0.75);
+      transform: translateX(280px) scale(0.75);
       z-index: 1;
     }
 
-    .arrow{
+    /* 각 카드별 개별 배경 */
+    .card1 { background-image: url(./images/BG/bg_hogwarts.jpg); }
+    .card2 { background-image: url(./images/BG/dark_city.jpg); }
+    .card3 { background-image: url(./images/BG/web_pofol_BG.jpg); }
+    .card4 { background-image: url(./images/BG/web_pofol_BG2.jpg); }
+    .card5 { background-image: url(./images/BG/bg_hogwarts.jpg); }
+
+    .arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 50px;
       height: 80px;
+      padding-top: 10px;
       background: #d3dbe4;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      background-color: rgba(125, 125, 125, 0.3);
+      box-shadow: 0 4px 6px rgba(0,0,0,1);
       z-index: 3;
+      font-size: 24px;            /* 글자 크기 */
+      box-shadow: 0 8px 16px rgba(0,0,0,2);
     }
 
     .arrow span {
@@ -123,8 +154,8 @@
       color: #444;
     }
 
-    .arrow.prev { left: -20px; }
-    .arrow.next { right: -20px; }
+    .arrow.prev { left: -80px;}
+    .arrow.next { right: -80px; }
   </style>
 </head>
 <body>
@@ -138,12 +169,14 @@
 
   <div class="carousel-wrapper">
     <div class="carousel">
-      <div class="card left">Home</div>
-      <div class="card center">About me</div>
-      <div class="card right">Product</div>
+      <div class="card card1">1</div>
+      <div class="card card2">2</div>
+      <div class="card card3">3</div>
+      <div class="card card4">4</div>
+      <div class="card card5">5</div>
     </div>
-      <div class="arrow prev"><span>◀</span></div>
-      <div class="arrow next"><span>▶</span></div>
+    <div class="arrow prev">◀</div>
+    <div class="arrow next">▶</div>
   </div>
 
   <script>
@@ -151,21 +184,28 @@
     const prev = document.querySelector('.prev');
     const next = document.querySelector('.next');
 
-    let positions = ['left', 'center', 'right'];
+    let current = 0;
 
     function update() {
       cards.forEach((card, i) => {
-        card.className = 'card ' + positions[i];
+        card.classList.remove("left", "center", "right");
+        if (i === current) {
+          card.classList.add("center");
+        } else if (i === (current - 1 + cards.length) % cards.length) {
+          card.classList.add("left");
+        } else if (i === (current + 1) % cards.length) {
+          card.classList.add("right");
+        }
       });
     }
 
-    next.addEventListener('click', () => {
-      positions.unshift(positions.pop()); // rotate right
+    next.addEventListener("click", () => {
+      current = (current + 1) % cards.length;
       update();
     });
 
-    prev.addEventListener('click', () => {
-      positions.push(positions.shift()); // rotate left
+    prev.addEventListener("click", () => {
+      current = (current - 1 + cards.length) % cards.length;
       update();
     });
 
