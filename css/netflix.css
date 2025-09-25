@@ -29,7 +29,7 @@ body{
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
-    background: rgba(22, 22, 22, 0.7) url("../images/icons/cafe.svg") no-repeat; /*크기바꾸는법과 색 변경 방법*/
+    background: rgba(22, 22, 22, 0.7); /*크기바꾸는법과 색 변경 방법*/
     width: 124px;
     height: 32px;
     border-radius: 4px;
@@ -44,6 +44,17 @@ body{
     border-radius: 4px;
 }
 .main-container{
+    background: linear-gradient(to bottom,
+      rgba(0,0,0,1) 0%,   /* 위쪽 딤 */
+      rgba(0,0,0,0) 60%,   /* 중앙은 투명 */
+      rgba(0,0,0,0) 80%,
+      rgba(0,0,0,0.1) 100% /* 아래쪽 딤 */
+    ), linear-gradient(to top,
+    rgba(0,0,0,1) 0%,   /* 위쪽 딤 */
+    rgba(0,0,0,0) 60%,   /* 중앙은 투명 */
+    rgba(0,0,0,0) 80%,
+    rgba(0,0,0,0.1) 100% /* 아래쪽 딤 */
+  ),url(../images/bg_hogwarts.jpg) no-repeat center center/cover;
     color: white;
     display: flex;
     justify-content: center;
@@ -52,7 +63,7 @@ body{
     max-width: 1520px;
     width: 100%;
     height: 562px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 120px 0 0 0;
     margin-bottom: 130px;
 }
@@ -84,15 +95,19 @@ form{
     
 }
 form input{
+    color: white;
     background-color: rgba(255, 255, 255, 0.05);
     width: 407px;
     height: 56px;
-    border: 1px solid grey;
+    border: 1px solid white;
     border-radius: 4px;
     font-size: 1rem;
     font-weight: 550;
     padding: 0 16px;
     margin: 0 8px 0 0;
+}
+form input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
 }
 form button{
     width: 172px;
@@ -170,11 +185,14 @@ button img{ /*화살표 정렬 여쭤보기*/
             width: 100%;
             margin: 0 auto;
             margin-bottom: 64px;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             /* display: flex; */
             /* justify-content: space-between; */
             gap: 12px;
-            overflow: visible
+            overflow: visible;
+        }
+        .now-viewport{
+            overflow: hidden;
         }
         .now-contents{
             display: flex;
@@ -183,15 +201,24 @@ button img{ /*화살표 정렬 여쭤보기*/
             height: 252px;
             /* position: relative; */
             border-radius: 0.7rem;
-            overflow: hidden;
+            gap: 12px;
+            will-change: transform;
+            transform: translateX(0);
+            transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         .now-content{
             position: relative;
-            width: 180px;
-            height: 252px;
-            flex: 0 0 auto; /* flex 아이템이 줄지 않도록 설정 */
+            width: 210px;
+            height: 270px;
+            flex: 0 0 210px; /* flex 아이템이 줄지 않도록 설정 */
             border-radius: 0.7rem;
             overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .now-content:hover{
+            transform: scale(1.1);
+            z-index: 5;
         }
         .now-contents img{
             width: 100%;
@@ -200,6 +227,7 @@ button img{ /*화살표 정렬 여쭤보기*/
             border-radius: 0.7rem;
             position: absolute;
             left: 20px;
+            display: block;
         }
         .rank {
             font-size: 100px;          
@@ -213,25 +241,29 @@ button img{ /*화살표 정렬 여쭤보기*/
             z-index: 100;
         }
         .prev, .next{
-            width: 24px;
-            height: 120px;
-            color: rgba(255, 255, 255, 0.7);
-            background-color: rgba(255, 255, 255, 0.1);
-            font-size: 12px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            border-radius: 5px;
+            width: 24px !important;
+            height: 120px !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            background-color: #2d2d2d !important;
+            font-size: 12px !important;
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            z-index: 10 !important;
+            border-radius: 5px !important;
+            border: none !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            opacity: 1 !important;
+            visibility: visible !important;
         }
         .prev{
-            position: absolute;
-            left: -25px;
+            left: -28px !important;
         }
         .next{
-            position: absolute;
-            right: -25px;
-            
+            right: -28px !important;
         }
 
 
@@ -239,7 +271,7 @@ button img{ /*화살표 정렬 여쭤보기*/
         width: 1224px;
         margin: 0 auto;
         margin-bottom: 64px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         color: white;
         display: flex;
         justify-content: space-between;
@@ -247,7 +279,7 @@ button img{ /*화살표 정렬 여쭤보기*/
         .reason-content1{
             width: 294px;
             height: 331px;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             border-radius:1rem ;
             padding: 24px 16px 128px;
             background: url('../images/icons/tv.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));
@@ -255,7 +287,7 @@ button img{ /*화살표 정렬 여쭤보기*/
         .reason-content2{
             width: 294px;
             height: 331px;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             border-radius:1rem ;
             padding: 24px 16px 128px;
             background: url('../images/icons/download.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));
@@ -263,7 +295,7 @@ button img{ /*화살표 정렬 여쭤보기*/
         .reason-content3{
             width: 294px;
             height: 331px;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             border-radius:1rem ;
             padding: 24px 16px 128px;
             background: url('../images/icons/scope.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));
@@ -271,7 +303,7 @@ button img{ /*화살표 정렬 여쭤보기*/
         .reason-content4{
             width: 294px;
             height: 331px;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             border-radius:1rem ;
             padding: 24px 16px 128px;
             background: url('../images/icons/ghost.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));

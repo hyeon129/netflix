@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/netflix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 
@@ -52,51 +51,53 @@
     </article>
 
     <h4>지금 뜨는 콘텐츠</h4>
-    <div class="now-container">
-        <button type="button" class="prev">◀</button>
-        <button type="button" class="next">▶</button>
-        <ul class="now-contents">
-            <li class="now-content">
-                <div class="rank">1</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">2</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">3</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">4</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">5</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">6</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">7</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">8</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">9</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-            <li class="now-content">
-                <div class="rank">10</div>
-                <img src="./images/kpop demon golden.png" alt="golden">
-            </li>
-        </ul>
+    <div class="now-container" id="trending">
+        <button type="button" class="prev" aria-label="이전">◀</button>
+        <button type="button" class="next" aria-label="다음">▶</button>
+        <div class="now-viewport">
+            <ul class="now-contents">
+                <li class="now-content">
+                    <div class="rank">1</div>
+                    <img src="./images/poster/해리포터 1편.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">2</div>
+                    <img src="./images/kpop demon golden.png" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">3</div>
+                    <img src="./images/poster/애마.jpg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">4</div>
+                    <img src="./images/poster/트리거.jpg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">5</div>
+                    <img src="./images/poster/폭군의 셰프.jpg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">6</div>
+                    <img src="./images/poster/고백의 역사.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">7</div>
+                    <img src="./images/poster/귀멸의 칼날 무한성.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">8</div>
+                    <img src="./images/poster/거룩한밤.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">9</div>
+                    <img src="./images/poster/케데몬.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">10</div>
+                    <img src="./images/poster/죽음의 성물 2.jpeg" alt="golden">
+                </li>
+            </ul>
+        </div>
     </div>
 
     <h5>가입해야 하는 또 다른 이유</h5>
@@ -234,9 +235,9 @@
   </div>
 </section>
 
-    <sapn class="footer-txt">
+    <span class="footer-txt">
         시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.
-    </sapn>
+    </span>
     <form>
        <input type="email" placeholder="이메일주소" required>
        <button type="submit">시작하기
@@ -245,14 +246,52 @@
     </form>
 
 <script>
+    // FAQ toggle
     const faqs = document.querySelectorAll(".faq-item");
+    faqs.forEach(item => {
+      const question = item.querySelector(".faq-question");
+      question.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
 
-faqs.forEach(item => {
-  const question = item.querySelector(".faq-question");
-  question.addEventListener("click", () => {
-    item.classList.toggle("active");
-  });
-});
+    // Trending carousel logic (viewport-based paging)
+    (function(){
+      const container = document.getElementById('trending');
+      if(!container) return;
+      const prevBtn = container.querySelector('.prev');
+      const nextBtn = container.querySelector('.next');
+      const viewportEl = container.querySelector('.now-viewport');
+      const track = container.querySelector('.now-contents');
+
+      let index = 0; // page index
+
+      const getViewport = () => viewportEl.clientWidth;
+      const getMaxOffset = () => Math.max(0, track.scrollWidth - viewportEl.clientWidth);
+
+      const update = () => {
+        const viewport = getViewport();
+        const maxOffset = getMaxOffset();
+        let offset = Math.min(index * viewport, maxOffset);
+        // 마지막 페이지는 정확히 끝에 스냅
+        if(index * viewport > maxOffset - 1){ offset = maxOffset; }
+        track.style.transform = `translateX(${-offset}px)`;
+        const maxIndex = Math.ceil(maxOffset / viewport);
+        prevBtn.disabled = index <= 0;
+        nextBtn.disabled = index >= maxIndex;
+      };
+
+      const next = () => { const viewport = getViewport(); const maxOffset = getMaxOffset(); const maxIndex = Math.ceil(maxOffset / viewport); if(index < maxIndex){ index++; update(); } };
+      const prev = () => { if(index>0){ index--; update(); } };
+
+      nextBtn.addEventListener('click', next);
+      prevBtn.addEventListener('click', prev);
+      container.addEventListener('keydown', (e) => { if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); });
+      container.tabIndex = 0;
+
+      window.addEventListener('resize', update);
+      update();
+    })();
 </script>
 
 
