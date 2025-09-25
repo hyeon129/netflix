@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neflix</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/netflix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+<div class="main-page">
+    <header class="header-container">
+       <img class="netflix-logo" src="./images/Netflix_2015_logo.svg" alt="넷플릭스">
+    <div class="header-group">
+        <!-- <img src="./images/icons/cafe.svg" class="select-img"> -->
+        <select>
+            <option value="ko">한국어</option>
+            <option value="en">English</option>
+        </select>
+        <button type="button">로그인</button>
+    </div>
+    </header>
+    <div class="main-container">
+        <article class="box1">
+            <h1>영화, 시리즈 등을<br>
+                무제한으로
+            </h1>
+            <h2>
+           <strong>7,000</strong>원으로 시작하세요. 멤버십은 언제든지 해지 가능합니다. <!--em이 기울어진 폰트로 나옴-->
+            </h2>
+            <h3>
+                시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.
+            </h3>
+    <form>
+       <input type="email" placeholder="이메일주소" required>
+       <button type="submit">시작하기
+       <img src="./images/arrow_r.svg" alt="화살표">
+       </button> <!--버튼과 인풋 클래스명 어떤게 좋을지 여쭤보기-->
+    </form>
+    </article>
+</div>
+    <article class="speci-box">
+        <h1><strong>7,000원</strong>이면 만날 수 있는 넷플릭스.</h1>
+        <p>
+            가장 경제적인 광고형 멤버십을 이용해보세요.
+        </p>        
+        <a href="#">자세히 알아보기</a>
+    </article>
+
+    <h4>지금 뜨는 콘텐츠</h4>
+    <div class="now-container" id="trending">
+        <button type="button" class="prev" aria-label="이전">◀</button>
+        <button type="button" class="next" aria-label="다음">▶</button>
+        <div class="now-viewport">
+            <ul class="now-contents">
+                <li class="now-content">
+                    <div class="rank">1</div>
+                    <img src="./images/poster/해리포터 1편.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">2</div>
+                    <img src="./images/kpop demon golden.png" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">3</div>
+                    <img src="./images/poster/애마.jpg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">4</div>
+                    <img src="./images/poster/트리거.jpg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">5</div>
+                    <img src="./images/poster/폭군의 셰프.jpg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">6</div>
+                    <img src="./images/poster/고백의 역사.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">7</div>
+                    <img src="./images/poster/귀멸의 칼날 무한성.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">8</div>
+                    <img src="./images/poster/거룩한밤.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">9</div>
+                    <img src="./images/poster/케데몬.jpeg" alt="golden">
+                </li>
+                <li class="now-content">
+                    <div class="rank">10</div>
+                    <img src="./images/poster/죽음의 성물 2.jpeg" alt="golden">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h5>가입해야 하는 또 다른 이유</h5>
+        <div class="reason-container">
+        <ul class="reason-content1">
+            <li>
+                <h1>TV로 즐기세요</h1>
+                <p>
+                    스마트 TV, PlayStation, Xbox,<br> 
+                    Chromecast, Apple TV, 블루레이<br> 
+                    플레이어 등 다양한 디바이스에서<br>
+                    시청하세요.
+                </p>
+            </li>
+            </ul>
+        <ul class="reason-content2">
+            <li>
+                <h1>즐겨 보는 콘텐츠를 저장해<br> 오프라인으로 시청하세요</h1>
+                <p>
+                    간편하게 저장하고 빈틈없이<br> 즐겨보세요.
+                </p>
+            </li>
+            </ul>
+        <ul class="reason-content3">
+            <li>
+                <h1>다양한 디바이스로<br> 시청하세요</h1>
+                <p>
+                    각종 영화와 시리즈를 스마트폰, 태블릿,<br> 노트북, TV에서 무제한으로<br> 스트리밍하세요.
+                </p>
+            </li>
+            </ul>
+        <ul class="reason-content4">
+            <li>
+                <h1>어린이 전용 프로필을<br> 만들어 보세요</h1>
+                <p>
+                    자기만의 공간에서 좋아하는 캐릭터와<br> 즐기는 신나는 모험. 자녀에게 이 특별한<br> 경험을 선물하세요. 넷플릭스<br> 회원이라면 무료입니다.
+                </p>
+            </li>
+            </ul>
+        </div>        
+    </div>
+
+    <h6>자주 묻는 질문</h6>
+    <!-- <div class="faq-container">
+        <details class="detail">
+            <summary>
+                넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?
+            </summary>
+            <div>
+            <p>
+                넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다.
+            </p>
+            <button type="button"><alt="arrow"></button>
+            <a href="#">넷플릭스 콘텐츠 살펴보기</a>
+            </div>
+        </details>
+        <details class="detail">
+            <summary>
+                넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?
+            </summary>
+            <div>
+            <p>
+                넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다.
+            </p>
+            <button type="button"><alt="arrow"></button>
+            <a href="#">넷플릭스 콘텐츠 살펴보기</a>
+            </div>
+        </details>
+        <details class="detail">
+            <summary>
+                넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?
+            </summary>
+            <div>
+            <p>
+                넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다.
+            </p>
+            <button type="button"><alt="arrow"></button>
+            <a href="#">넷플릭스 콘텐츠 살펴보기</a>
+            </div>
+        </details>
+    </div> -->
+    <section class="faq">
+  <div class="faq-item">
+    <button class="faq-question">
+      넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      넷플릭스는 장편 영화, 다큐멘터리, 시리즈, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를<br> 확보하고 있습니다. 마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하실 수 있습니다.<br><br>
+      <a href="#">넷플릭스 콘텐츠를 한번 살펴보세요.</a>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      넷플릭스란 무엇인가요?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      넷플릭스는 각종 수상 경력에 빛나는 시리즈, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한<br> 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다.<br><br>
+      저렴한 월 요금으로 원하는 시간에 원하는 만큼 즐길 수 있습니다. 무궁무진한 콘텐츠가 준비되어 있으며 매주 새로운<br> 시리즈와 영화가 제공됩니다.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      넷플릭스 요금은 얼마인가요?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      스마트폰, 태블릿, 스마트 TV, 노트북, 스트리밍 디바이스 등 다양한 디바이스에서 월정액 요금 하나로 넷플릭스를<br> 시청하세요. 멤버십 요금은 월 7,000원부터 17,000원까지 다양합니다. 추가 비용이나 약정이 없습니다.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      멤버십을 해지하려면 어떻게 하나요?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      넷플릭스는 부담 없이 간편합니다. 성가신 계약도, 약정도 없으니까요. 멤버십 해지도 온라인에서 클릭 두 번이면 완료할<br> 수 있습니다. 해지 수수료도 없으니 원할 때 언제든 계정을 시작하거나 종료하세요.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      아이들이 넷플릭스를 봐도 좋을까요?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      멤버십에 넷플릭스 키즈 환경이 포함되어 있어 자녀가 자기만의 공간에서 가족용 시리즈와 영화를 즐기는 동안 부모가 이를<br> 관리할 수 있습니다.<br><br>
+
+      키즈 프로필과 더불어 PIN 번호를 이용한 자녀 보호 기능도 있어, 자녀가 시청할 수 있는 콘텐츠의 관람등급을 제한하고<br> 자녀의 시청을 원치 않는 특정 작품을 차단할 수도 있습니다.
+    </div>
+  </div>
+</section>
+
+    <span class="footer-txt">
+        시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.
+    </span>
+    <form>
+       <input type="email" placeholder="이메일주소" required>
+       <button type="submit">시작하기
+       <img src="./images/arrow_r.svg" alt="화살표">
+       </button> <!--버튼과 인풋 클래스명 어떤게 좋을지 여쭤보기-->
+    </form>
+
+<script>
+    // FAQ toggle
+    const faqs = document.querySelectorAll(".faq-item");
+    faqs.forEach(item => {
+      const question = item.querySelector(".faq-question");
+      question.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+
+    // Trending carousel logic (viewport-based paging)
+    (function(){
+      const container = document.getElementById('trending');
+      if(!container) return;
+      const prevBtn = container.querySelector('.prev');
+      const nextBtn = container.querySelector('.next');
+      const viewportEl = container.querySelector('.now-viewport');
+      const track = container.querySelector('.now-contents');
+
+      let index = 0; // page index
+
+      const getViewport = () => viewportEl.clientWidth;
+      const getMaxOffset = () => Math.max(0, track.scrollWidth - viewportEl.clientWidth);
+
+      const update = () => {
+        const viewport = getViewport();
+        const maxOffset = getMaxOffset();
+        let offset = Math.min(index * viewport, maxOffset);
+        // 마지막 페이지는 정확히 끝에 스냅
+        if(index * viewport > maxOffset - 1){ offset = maxOffset; }
+        track.style.transform = `translateX(${-offset}px)`;
+        const maxIndex = Math.ceil(maxOffset / viewport);
+        prevBtn.disabled = index <= 0;
+        nextBtn.disabled = index >= maxIndex;
+      };
+
+      const next = () => { const viewport = getViewport(); const maxOffset = getMaxOffset(); const maxIndex = Math.ceil(maxOffset / viewport); if(index < maxIndex){ index++; update(); } };
+      const prev = () => { if(index>0){ index--; update(); } };
+
+      nextBtn.addEventListener('click', next);
+      prevBtn.addEventListener('click', prev);
+      container.addEventListener('keydown', (e) => { if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); });
+      container.tabIndex = 0;
+
+      window.addEventListener('resize', update);
+      update();
+    })();
+</script>
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <p>질문이 있으신가요? 문의 전화: <a href="tel:003083210161">00-308-321-0161</a> (수신자 부담)</p>
+  </div>
+
+  <ul class="footer-links">
+    <li><a href="#">자주 묻는 질문</a></li>
+    <li><a href="#">고객 센터</a></li>
+    <li><a href="#">계정</a></li>
+    <li><a href="#">미디어 센터</a></li>
+    <li><a href="#">투자 정보(IR)</a></li>
+    <li><a href="#">입사 정보</a></li>
+    <li><a href="#">넷플릭스 지원 디바이스</a></li>
+    <li><a href="#">이용 약관</a></li>
+    <li><a href="#">개인정보 처리방침</a></li>
+    <li><a href="#">쿠키 설정</a></li>
+    <li><a href="#">회사 정보</a></li>
+    <li><a href="#">문의하기</a></li>
+    <li><a href="#">속도 테스트</a></li>
+    <li><a href="#">법적 고지</a></li>
+    <li><a href="#">오직 넷플릭스에서</a></li>
+  </ul>
+
+  <div class="footer-lang">
+    <select>
+      <option>한국어</option>
+      <option>English</option>
+    </select>
+  </div>
+
+  <div class="footer-info">
+    <p>넷플릭스 대한민국</p>
+    <p>
+      넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호<br>
+      대표: 레지널드 숀 톰프슨 | 이메일: korea@netflix.com<br>
+      주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161<br>
+      사업자등록번호: 165-87-00119 | 클라우드 호스팅: Amazon Web Services Inc.<br>
+      공정거래위원회 웹사이트
+    </p>
+    <p class="footer-note">
+      이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.
+      <a href="#">자세히 알아보기</a>.
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
