@@ -1,483 +1,418 @@
+/* ===== 기본 레이아웃 ===== */
 body{
+    margin: 0;
     background-color: black;
-}
-.header-container{
+    min-height: 100vh;     /* 전체 페이지 최소 높이 */
+    /* 폰트 패밀리/보정값 지정하지 않음 → 전 버전 느낌 유지 */
+  }
+  .container{
+    max-width: 1224px;
+    margin: 0 auto;
+    padding-inline: 16px;
+  }
+  /* ===== 헤더 ===== */
+  .header-container{
     max-width: 1240px;
     width: 100%;
-    height: 88px; /* ← 확실한 높이 지정 */
+    height: 88px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* 세로 가운데 정렬 */
+    align-items: center;
     margin: 0 auto;
     padding: 0 7px;
-}
-.netflix-logo{
-    width: 148px;
-    height: 40px;
-}
-.header-group{
+  }
+  .netflix-logo{ width: 148px; height: 40px; }
+  .header-group{
     color: white;
-    padding: 0 6px; /*여기에 컬러와 폰트 웨이트 안먹히는 이유*/ 
+    padding: 0 6px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 12px;
     margin: 0 12px;
-}
-.header-group select{
+  }
+  .header-group select{
     color: white;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 400;                 /* 전 버전 */
     text-align: center;
-    background: rgba(22, 22, 22, 0.7); /*크기바꾸는법과 색 변경 방법*/
+    background: rgba(22,22,22,0.7);
     width: 124px;
     height: 32px;
     border-radius: 4px;
-    /*gap과 패딩 입히는 방법*/
-}
-.header-group button{
+    border: 1px solid white;
+  }
+  .header-group button{
     background-color: red;
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 400;                 /* 전 버전 */
     width: 70px;
     height: 32px;
     border-radius: 4px;
-}
-.main-container{
-    background: linear-gradient(to bottom,
-      rgba(0,0,0,1) 0%,   /* 위쪽 딤 */
-      rgba(0,0,0,0) 60%,   /* 중앙은 투명 */
-      rgba(0,0,0,0) 80%,
-      rgba(0,0,0,0.1) 100% /* 아래쪽 딤 */
-    ), linear-gradient(to top,
-    rgba(0,0,0,1) 0%,   /* 위쪽 딤 */
-    rgba(0,0,0,0) 60%,   /* 중앙은 투명 */
-    rgba(0,0,0,0) 80%,
-    rgba(0,0,0,0.1) 100% /* 아래쪽 딤 */
-  ),url(../images/bg_hogwarts.jpg) no-repeat center center/cover;
-    color: white;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* ===== 배경 히어로 ===== */
+  .hero{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;                /* 전 버전: 고정 100vh */
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+  
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.1) 100%),
+      linear-gradient(to top,    rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.1) 100%),
+      url("../images/bg_hogwarts.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center center, center center, center center;
+    background-size: auto, auto, cover;  /* 이미지만 cover */
+    background-attachment: scroll, scroll, scroll;
+  }
+  .hero__inner{
     max-width: 1520px;
     width: 100%;
-    height: 562px;
-    /* border: 1px solid red; */
-    padding: 120px 0 0 0;
-    margin-bottom: 130px;
-}
-.box1{
-    width: 100%;
-    color: white;
-}
-.box1 h1{
-    font-size: 56px;    
+    padding: 120px 16px 0;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+  }
+  
+  /* ===== 히어로 텍스트 ===== */
+  .box1{ width: 100%; color: white; }
+  .box1 h1{
+    font-size: 56px;                  /* 전 버전 고정값 */
     font-weight: 900;
     line-height: 1.2;
     margin: 0 0 16px;
-}
-.box1 h2{
-    font-size: 20px;
+  }
+  .box1 h2{
+    font-size: 20px;                  /* 전 버전 고정값 */
     font-weight: 500;
     margin: 0 0 32px;
-}
-.box1 h3{
-    font-size: 16px;
-}
-form{ 
-    /* 버튼들 가운데 정렬방법 */
+  }
+  .box1 h3{ font-size: 16px; font-weight: 400; }
+  
+  /* ===== 폼 ===== */
+  form{
     margin-top: 16px;
     display: flex;
-    justify-content: center; /* 가로 가운데 정렬 */
-    align-items: center;     /* 세로 가운데 정렬 (높이 필요) */
-    /* position: relative; */
-    
-}
-form input{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+  form input{
     color: white;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255,255,255,0.05);
     width: 407px;
+    max-width: 90vw;
     height: 56px;
     border: 1px solid white;
     border-radius: 4px;
     font-size: 1rem;
     font-weight: 550;
     padding: 0 16px;
-    margin: 0 8px 0 0;
-}
-form input::placeholder{
-    color: rgba(255, 255, 255, 0.5);
-}
-form button{
+  }
+  form input::placeholder{ color: rgba(255,255,255,0.5); }
+  form button{
     width: 172px;
     height: 56px;
     background-color: red;
     border-radius: 4px;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.5rem;                /* 전 버전 */
+    font-weight: 600;                 /* 전 버전 */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 14px;
-}
-button img{ /*화살표 정렬 여쭤보기*/
-    width: 24px;
-    height: 24px;
-    
-    /* translate: 0 -50%; */
-}
-
-
-.speci-box{
-            max-width: 1140px;
-            width: 100%;
-            height: 83px;
-            border-radius: 16px;
-            background: linear-gradient(90deg,rgb(38, 23, 51), rgb(21, 26, 63));
-            color: white;
-            margin: 50px auto;
-            padding: 16px 32px;
-            position: relative;
-            transition: 0.8s;
-        }
-        .speci-box  h1{
-            font-size: 18px;
-         
-        }
-        .speci-box a{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            background-color: rgb(65, 67, 68);
-            width: 138px;
-            height: 40px;
-            border-radius: 4px;
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            translate: 0 -50%;
-            transition: 0.3s;
-            
-        }
-        .speci-box:hover{
-            scale: 1.02;
-            transform:translate(0,-1px);
-            background: linear-gradient(90deg, rgb(71, 37, 102), rgb(22, 29, 82));
-        }
-        .speci-box a:hover{
-            background-color: rgb(59, 60, 98);
-        }
-        
-        h4,h5,h6{
-            color: white;
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            padding-left: 150px;
-        }
-   
-   
-     .now-container{ /*얘네를 1224부터 시작하게 하는 방법*/
-            position: relative;
-            max-width: 1224px;
-            width: 100%;
-            margin: 0 auto;
-            margin-bottom: 64px;
-            /* border: 1px solid red; */
-            /* display: flex; */
-            /* justify-content: space-between; */
-            gap: 12px;
-            overflow: visible;
-        }
-        .now-viewport{
-            overflow: hidden;
-        }
-        .now-contents{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            height: 252px;
-            /* position: relative; */
-            border-radius: 0.7rem;
-            gap: 12px;
-            will-change: transform;
-            transform: translateX(0);
-            transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .now-content{
-            position: relative;
-            width: 210px;
-            height: 270px;
-            flex: 0 0 210px; /* flex 아이템이 줄지 않도록 설정 */
-            border-radius: 0.7rem;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .now-content:hover{
-            transform: scale(1.1);
-            z-index: 5;
-        }
-        .now-contents img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 이미지 꽉 차게, 넘치는 부분은 잘림 */
-            border-radius: 0.7rem;
-            position: absolute;
-            left: 20px;
-            display: block;
-        }
-        .rank {
-            font-size: 100px;          
-            font-weight: 900;          
-            color: black;               
-            -webkit-text-stroke: 3px white; 
-            font-family: 'Arial Black', sans-serif; 
-            position: absolute;
-            bottom: 0;
-            translate: -3% 3%;
-            z-index: 100;
-        }
-        .prev, .next{
-            width: 24px !important;
-            height: 120px !important;
-            color: rgba(255, 255, 255, 0.7) !important;
-            background-color: #2d2d2d !important;
-            font-size: 12px !important;
-            position: absolute !important;
-            top: 50% !important;
-            transform: translateY(-50%) !important;
-            z-index: 10 !important;
-            border-radius: 5px !important;
-            border: none !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            cursor: pointer !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-        .prev{
-            left: -28px !important;
-        }
-        .next{
-            right: -28px !important;
-        }
-
-
-    .reason-container{
-        width: 1224px;
-        margin: 0 auto;
-        margin-bottom: 64px;
-        /* border: 1px solid red; */
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        }
-        .reason-content1{
-            width: 294px;
-            height: 331px;
-            /* border: 1px solid red; */
-            border-radius:1rem ;
-            padding: 24px 16px 128px;
-            background: url('../images/icons/tv.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));
-        }
-        .reason-content2{
-            width: 294px;
-            height: 331px;
-            /* border: 1px solid red; */
-            border-radius:1rem ;
-            padding: 24px 16px 128px;
-            background: url('../images/icons/download.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));
-        }
-        .reason-content3{
-            width: 294px;
-            height: 331px;
-            /* border: 1px solid red; */
-            border-radius:1rem ;
-            padding: 24px 16px 128px;
-            background: url('../images/icons/scope.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));
-        }
-        .reason-content4{
-            width: 294px;
-            height: 331px;
-            /* border: 1px solid red; */
-            border-radius:1rem ;
-            padding: 24px 16px 128px;
-            background: url('../images/icons/ghost.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33, 14, 23), rgb(25, 34, 70));
-        }
-        .reason-container h1{
-            font-size: 1.5rem;
-            font-weight: 600;
-            padding-bottom: 20px;
-        }
-        .reason-container p{
-            font-size: 1rem;
-            color: #ffffffb3;
-        }
-    /* .faq-container{
-        position: relative;
-        border: 1px solid red;
-        max-width: 1224px;
-        width: 100%;
-        color: white;
-        margin: 20px auto;
-    }
-        .detail{
-            width: 100%;
-            border: 1px solid red;
-            background-color: rgb(68, 68, 68);
-            font-size: 24px;
-            max-width: 1224px;
-            padding: 24px;
-            margin-bottom: 10px;
-    }
-        .faq-container p a{
-            position: absolute;
-            left: 0;
-            width: 100%;
-            /* height: auto; */
-            /* border-top: 1px solid black;
-            background-color: rgb(68, 68, 68);
-            font-size: 24px;
-            padding: 24px;
-    }   
-        .detail summary::after{
-            content: "";
-            position: absolute;
-            right: 20px;
-            background: url('../images/icons/plus-solid-full-wt.svg') no-repeat center center/contain;
-            top: 50%; 
-            translate: 0 -50%;
-            width: 24px;
-    } */ 
-     .faq {
-  max-width: 1224px;
-  margin: 20px auto;
-  color: white;
-  font-size: 1.6rem;
-}
-
-.faq-item {
-  border-bottom: 1px solid #333;
-  width: 100%;
-  margin-bottom: 8px;
-  /* height: 84px; */
-}
-
-.faq-question {
-  width: 100%;
-  padding: 28px;
-  background: #303030;
-  color: white;
-  font-size: 1.3rem;
-  text-align: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  /* position: relative; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question .icon {
-  font-size: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  background: #303030;
-  padding: 0 20px;
-  font-size: 1rem;
-  line-height: 1.5;
-  transition: max-height 0.1s ease, padding 0.3s ease;
-}
-
-/* 열렸을 때 */
-.faq-item.active .faq-answer {
-  max-height: 500px;  /* 충분히 크게 설정 */
-  padding: 28px;
-}
-
-.faq-item.active .faq-question .icon {
-  transform: rotate(45deg); /* + → × 로 변환 */
-}
-
-
-.footer-txt{
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  button img{ width: 24px; height: 24px; }
+  
+  /* ===== 프로모 박스 ===== */
+  .speci-box{
+    max-width: 1140px;
+    width: 100%;
+    height: 83px;
+    border-radius: 16px;
+    background: linear-gradient(90deg,rgb(38,23,51), rgb(21,26,63));
+    color: white;
+    margin: 50px auto;
+    padding: 16px 32px;
+    position: relative;
+    transition: 0.8s;
+  }
+  .speci-box h1{ font-size: 18px; font-weight: 400; }
+  .speci-box a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(65,67,68);
+    width: 138px;
+    height: 40px;
+    border-radius: 4px;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    translate: 0 -50%;
+    transition: 0.3s;
+  }
+  .speci-box:hover{
+    scale: 1.02;
+    transform: translate(0,-1px);
+    background: linear-gradient(90deg, rgb(71,37,102), rgb(22,29,82));
+  }
+  .speci-box a:hover{ background-color: rgb(59,60,98); }
+  
+  /* ===== 섹션 타이틀 ===== */
+  h4,h5,h6{
+    color: white;
+    font-size: 1.5rem;                  /* 전 버전 */
+    font-weight: 600;                 /* 전 버전 */
+    margin: 24px 0;
+  }
+  
+  /* ===== 지금 뜨는 콘텐츠 ===== */
+  .now-container{
+    position: relative;
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto 64px;
+    gap: 12px;
+    overflow: visible;
+    padding: 0 16px;
+  }
+  .now-viewport{ overflow: hidden; }
+  .now-contents{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 252px;
+    border-radius: 0.7rem;
+    gap: 12px;
+    will-change: transform;
+    transform: translateX(0);
+    transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1);
+  }
+  .now-content{
+    position: relative;
+    width: 210px;
+    height: 270px;
+    flex: 0 0 210px;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .now-content:hover{ transform: scale(1.1); z-index: 5; }
+  .now-contents img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    position: absolute; left: 20px; display: block;
+  }
+  .rank{
+    font-size: 100px;
+    font-weight: 900;
+    color: black;
+    -webkit-text-stroke: 3px white;
+    font-family: 'Arial Black', sans-serif;
+    position: absolute; bottom: 0; translate: -3% 3%;
+    z-index: 100;
+  }
+  .prev,.next{
+    width: 24px !important;
+    height: 120px !important;
+    color: rgba(255,255,255,0.7) !important;
+    background-color: #2d2d2d !important;
+    font-size: 12px !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    border-radius: 5px !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .prev{ left: -28px !important; }
+  .next{ right: -28px !important; }
+  
+  /* ===== 이유 카드 ===== */
+  .reason-container{
+    width: 1224px;
+    width: 100%;
+    margin: 0 auto 64px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-inline: 16px;
+  }
+  .reason-content1,
+  .reason-content2,
+  .reason-content3,
+  .reason-content4{
+    width: 294px;
+    height: 331px;
+    border-radius: 1rem;
+    padding: 24px 16px 128px;
+  }
+  .reason-content1{ background: url('../images/icons/tv.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33,14,23), rgb(25,34,70)); }
+  .reason-content2{ background: url('../images/icons/download.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33,14,23), rgb(25,34,70)); }
+  .reason-content3{ background: url('../images/icons/scope.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33,14,23), rgb(25,34,70)); }
+  .reason-content4{ background: url('../images/icons/ghost.svg') no-repeat right 20px bottom 20px, linear-gradient(-45deg, rgb(33,14,23), rgb(25,34,70)); }
+  
+  .reason-container h1{ font-size: 1.5rem; font-weight: 600; padding-bottom: 20px; }
+  .reason-container p{ font-size: 1rem; color: #ffffffb3; }
+  
+  /* ===== FAQ ===== */
+  .faq{
+    max-width: 1224px;
+    margin: 20px auto;
+    color: white;
+    font-size: 1.6rem;
+    padding: 0 16px;
+  }
+  .faq-item{ border-bottom: 1px solid #333; width: 100%; margin-bottom: 8px; }
+  .faq-question{
+    width: 100%;
+    padding: 28px;
+    background: #303030;
+    color: white;
+    font-size: 1.3rem;
+    text-align: left;
+    border: none; outline: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .faq-question .icon{ font-size: 2rem; transition: transform 0.3s ease; }
+  .faq-answer{
+    max-height: 0; overflow: hidden; background: #303030;
+    padding: 0 20px; font-size: 1rem; line-height: 1.5;
+    transition: max-height 0.1s ease, padding 0.3s ease;
+  }
+  .faq-item.active .faq-answer{ max-height: 500px; padding: 28px; }
+  .faq-item.active .faq-question .icon{ transform: rotate(45deg); }
+  
+  /* ===== 푸터 ===== */
+  .footer-txt{
     font-size: 16px;
     font-weight: 400;
     color: white;
     display: block;
     text-align: center;
     margin-top: 48px;
-}
-form button{
-    color: white;
-}
-form{
-    margin-bottom: 48px;
-}
-
-
-
-.footer {
-  max-width: 1224px;
-  margin: 40px auto;
-  padding: 5px;
-  color: #999;
-  font-size: 14px;
-}
-
-.footer a {
-  color: #999;
-  text-decoration: underline;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-top {
-  margin-bottom: 20px;
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3px;
-  list-style: none;
-  padding: 0;
-  margin: 40px 0;
-}
-
-.footer-links li {
-  margin-bottom: 12px;
-}
-
-.footer-lang {
-  margin: 20px 0;
-}
-
-.footer-lang select {
-  background: black;
-  border: 1px solid #333;
-  padding: 8px 12px;
-  color: #999;
-  border-radius: 4px;
-}
-
-.footer-info {
-  margin-top: 20px;
-  line-height: 1.5;
-}
-
-.footer-note {
-  margin-top: 12px;
-  font-size: 12px;
-}
+  }
+  .footer{
+    max-width: 1224px;
+    margin: 40px auto;
+    padding: 5px 16px;
+    color: #999;
+    font-size: 14px;
+  }
+  .footer a{ color: #999; text-decoration: underline; }
+  .footer a:hover{ text-decoration: underline; }
+  .footer-top{ margin-bottom: 20px; }
+  .footer-links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+  }
+  .footer-links li{ margin-bottom: 12px; }
+  
+  .footer-lang{ margin: 20px 0; }
+  .footer-lang select{
+    background: black;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    color: #999;
+    border-radius: 4px;
+  }
+  .footer-info{ margin-top: 20px; line-height: 1.5; }
+  .footer-note{ margin-top: 12px; font-size: 12px; }
+  
+  /* ===== 반응형 ===== */
+  @media (max-width: 768px){
+    .header-container{ flex-direction: column; height: auto; gap: 8px; }
+    .box1 h1{ font-size: 36px; }    /* 모바일 축소 버전(전 버전 관성) */
+    .box1 h2{ font-size: 18px; }
+    .reason-container{ width: 100%; padding: 0 16px; gap: 12px; flex-wrap: wrap; }
+    .reason-content1, .reason-content2, .reason-content3, .reason-content4{ width: calc(50% - 12px); }
+    /* h4,h5,h6{ padding-left: 16px; } */
+  }
+  @media (max-width: 480px){
+    .box1 h1{ font-size: 30px; }
+    .reason-content1, .reason-content2, .reason-content3, .reason-content4{ width: 100%; }
+    .now-container{ padding: 0 8px; }
+  }
+  html {
+    /* 모바일 브라우저의 글자 확대/고정 이슈 예방 */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* 전 버전 느낌을 상한값으로 유지하면서, 최소·중간·최대 값을 clamp로 지정 */
+  :root{
+    /* 히어로 영역 */
+    --fs-h1: clamp(32px, 4.2vw, 56px); /* 최소 32px, 보통 4.2vw, 최대 56px */
+    --fs-h2: clamp(16px, 1.6vw, 20px); /* 최대 20px */
+    --fs-h3: clamp(14px, 1.2vw, 16px); /* 최대 16px */
+  
+    /* 섹션 타이틀(지금 뜨는 콘텐츠/가입 이유/FAQ) */
+    --fs-section: clamp(18px, 1.8vw, 24px); /* 최대 24px */
+  
+    /* 버튼(전 버전 최대치 유지) */
+    --fs-cta: clamp(14px, 1.6vw, 1.5rem); /* 최대 1.5rem ≒ 24px */
+  }
+  
+  html{
+    font-size: 16px;           /* 사용자/브라우저 기본 글꼴 크기와 같이 스케일됨 */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* 히어로 타이틀 – 전 버전 최대 느낌 유지(56/20/16px) */
+  .box1 h1{ font-size: 3.5rem; /* 56px/16 = 3.5rem */ }
+  .box1 h2{ font-size: 1.25rem; /* 20px */ }
+  .box1 h3{ font-size: 1rem;    /* 16px */ }
+  
+  /* 섹션 타이틀 – 전 버전 24px 유지하면서 rem로 */
+  
+  
+  /* 버튼 텍스트 – 전 버전 1.5rem 유지 */
+  form button{ font-size: 1.5rem; }
+  
+  /* 헤더 컨트롤 – rem 기반 */
+  .header-group select{ font-size: 1rem; }
+  .header-group button{ font-size: 0.9rem; }
+  
+  /* 반응형: px → em (줌 시에도 브레이크포인트가 이동) */
+  /* 768px → 48em(=768/16), 480px → 30em */
+  @media (max-width: 48em){
+    .box1 h1{ font-size: 2.25rem; }  /* 36px */
+    .box1 h2{ font-size: 1.125rem; } /* 18px */
+    h4, h5, h6{ padding-left: 1rem; }/* 모바일에서 과한 여백 방지 */
+    .reason-container{ width: 100%; padding: 0 1rem; gap: 0.75rem; flex-wrap: wrap; }
+    .reason-content1, .reason-content2, .reason-content3, .reason-content4{ width: calc(50% - 0.75rem); }
+  }
+  @media (max-width: 30em){
+    .box1 h1{ font-size: 1.875rem; }  /* 30px */
+    .reason-content1, .reason-content2, .reason-content3, .reason-content4{ width: 100%; }
+    .now-container{ padding: 0 0.5rem; }
+  }
